@@ -13,8 +13,19 @@ namespace ngl.link_flooder
     {
         static void Main(string[] args)
         {
+            Console.Title = "ngl.link Flooder By SkemiiL";
+            string logo = @"             _   _ _       _       __ _                 _           
+ _ __   __ _| | | (_)_ __ | | __  / _| | ___   ___   __| | ___ _ __ 
+| '_ \ / _` | | | | | '_ \| |/ / | |_| |/ _ \ / _ \ / _` |/ _ \ '__|
+| | | | (_| | |_| | | | | |   <  |  _| | (_) | (_) | (_| |  __/ |   
+|_| |_|\__, |_(_)_|_|_| |_|_|\_\ |_| |_|\___/ \___/ \__,_|\___|_|   
+       |___/                                      by SkemiiL
+";
+
             var wb = new WebClient();
             var data = new NameValueCollection();
+
+            Console.WriteLine(logo);
 
             Console.Write("User: ");
             string user = Console.ReadLine();
