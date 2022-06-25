@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Collections.Specialized;
+using System.Threading;
 
 namespace ngl.link_flooder
 {
@@ -35,7 +36,8 @@ namespace ngl.link_flooder
                 }
                 catch(System.Net.WebException)
                 {
-                    Console.WriteLine("Rate limit");
+                    Console.WriteLine("[+] Rate limited waiting 1.5 seconds");
+                    Thread.Sleep(1500);
                 }
             }
             Console.WriteLine("[-] Finished flood!");
