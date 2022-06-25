@@ -7,8 +7,9 @@ namespace ngl.link_flooder
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            Console.Clear();
             Console.Title = "ngl.link Flooder By SkemiiL";
             string logo = @"             _   _ _       _       __ _                 _           
  _ __   __ _| | | (_)_ __ | | __  / _| | ___   ___   __| | ___ _ __ 
@@ -33,7 +34,7 @@ namespace ngl.link_flooder
             string url = "https://ngl.link/" + user;
             data["question"] = text;
 
-            for(int i = 0; i <= amt;)
+            for(int i = 1; i <= amt;)
             {
                 try
                 {
@@ -47,8 +48,9 @@ namespace ngl.link_flooder
                     Thread.Sleep(1500);
                 }
             }
-            Console.WriteLine("[-] Finished flood!");
+            Console.WriteLine("[-] Finished flood!\n--- Press Enter To Restart ---");
             Console.ReadLine();
+            Main();
         }
     }
 }
